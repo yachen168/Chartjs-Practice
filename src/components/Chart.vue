@@ -1,4 +1,5 @@
 <script>
+/* Do not use <template> in this .vue */
 import { Bar } from "vue-chartjs";
 
 export default {
