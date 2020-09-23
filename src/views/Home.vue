@@ -76,7 +76,8 @@ export default {
         maintainAspectRatio: false,
         title: {
           display: true,
-          text: "飲食紀錄與體重變化"
+          text: "飲食紀錄與體重變化",
+          fontSize: 18
         },
         legend: {
           position: "bottom",
@@ -101,7 +102,10 @@ export default {
               id: "y-axis-0",
               ticks: {
                 max: 40,
-                min: 0
+                min: 0,
+                callback: function(value, index, values) {
+                  return `${value} 份`;
+                }
               }
             },
             {
@@ -110,7 +114,10 @@ export default {
               id: "weight",
               ticks: {
                 max: 60,
-                min: 30
+                min: 30,
+                callback: function(value, index, values) {
+                  return `${value} kg`;
+                }
               }
             }
           ]
