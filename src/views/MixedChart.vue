@@ -62,14 +62,17 @@ export default {
           },
           {
             type: "line",
+            pointStyle: "rectRot",
+            pointRadius: 5,
+            pointHoverRadius: 8,
             label: "體重",
-            yAxisID: "weight",
+            yAxisID: "y-axis-1",
             backgroundColor: "transparent",
             pointBackgroundColor: "#407D60",
             pointBorderColor: "#407D60",
             borderColor: "#407D60",
             borderWidth: 1,
-            data: [50, 50, 50.5, 51, 50.5, 50, 50]
+            data: [50.2, 50.8, 51.6, 51, 51.4, 51, 50.6]
           }
         ]
       },
@@ -86,7 +89,7 @@ export default {
           position: "bottom",
           labels: {
             usePointStyle: true,
-            boxWidth: 12,
+            boxWidth: 22,
             fontSize: 14,
             padding: 20,
             fontColor: "#383838"
@@ -100,7 +103,6 @@ export default {
                 fontColor: "black"
               },
               gridLines: {
-                zeroLineColor: "black",
                 color: "#ccc"
               }
             }
@@ -127,10 +129,10 @@ export default {
             {
               stacked: false,
               position: "right",
-              id: "weight",
+              id: "y-axis-1",
               ticks: {
                 max: 60,
-                min: 30,
+                min: 20,
                 fontColor: "black",
                 padding: 8,
                 callback: function(value, index, values) {
